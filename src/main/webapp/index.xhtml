@@ -1,0 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+    <head><title>Budgets</title></head>
+    <body>
+        <f:view>
+            <h:form id="viewBudgetForm">
+                <h1><h:outputText value="Budgets"/></h1>
+                <h:outputText id="totaltAmountOfBudgets" value="#{indexBean.allBudgets.size()}"/>               
+                <h:commandLink id="viewAbudget" value="View budget" action="view-budget.xhtml">
+                    <f:param name="budgetId" value="#{indexBean.allBudgets.get(0).id}" />
+                </h:commandLink>
+            </h:form>
+        </f:view>
+    </body>
+</html>
